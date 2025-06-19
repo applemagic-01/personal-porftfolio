@@ -15,7 +15,7 @@ export default {
           hover: "#00e187",
         },
         background: 'var(--background)',
-        foreground: 'var(--foreground)'
+        foreground: 'var(--foreground)',
       },
       screens: {
         sm: "640px",
@@ -30,17 +30,21 @@ export default {
       container: {
         center: true,
         padding: "15px",
+        screens: {
+          sm: "640px",
+          md: "768px",
+          lg: "960px",
+          xl: "1140px",
+          "2xl": "1320px"
+        }
       },
+
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
+        sm: 'calc(var(--radius) - 4px)',
       },
-
     },
   },
   plugins: [require("tailwindcss-animate")],
-
-
-};
-
+}
