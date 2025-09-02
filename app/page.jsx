@@ -17,7 +17,7 @@ const Home = () => {
           {/* Button and social account  */}
           <div className="flex flex-col items-center gap-8 xl:flex-row">
             <Button asChild variant="outline" size="lg" className="flex items-center gap-2 uppercase">
-              <a href="/assets/resume/ANKITH-RESUME-Final-converted.pdf" download>
+              <a href="/assets/resume/ANKITH_RESUME.pdf" download>
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </a>
