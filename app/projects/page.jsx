@@ -21,7 +21,7 @@ const works = [
         title: 'Project 1',
         description: 'fluxo- a project management appilcation',
         stack: [{ name: "ReactJS" }, { name: "NodeJS" }, { name: "ExpressJS" }, { name: "PostgreSQL" }],
-        image: '/assets/work/thumb4.png',
+        image: '/assets/work/thumb6.png',
         live: "https://fluxo-virid.vercel.app/",
         github: 'https://github.com/applemagic-01/fluxo'
     },
