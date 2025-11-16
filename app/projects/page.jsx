@@ -15,10 +15,30 @@ import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const works = [
-    {
+   {
         num: '01',
-        category: 'Login System',
+        category: 'Project Management',
         title: 'Project 1',
+        description: 'fluxo- a project management appilcation',
+        stack: [{ name: "ReactJS" }, { name: "NodeJS" }, { name: "ExpressJS" }, { name: "PostgreSQL" }],
+        image: '/assets/work/thumb4.png',
+        live: "https://fluxo-virid.vercel.app/",
+        github: 'https://github.com/applemagic-01/fluxo'
+    },
+    {
+        num: '02',
+        category: 'Unsupervised feature learning for polymorphic malware',
+        title: 'Project 2',
+        description: 'Netmorph- Unsupervised feature learning for polymorphic malware using Autoencoder and Random Forest',
+        stack: [{ name: "Python" }],
+        image: '/assets/work/thumb4.png',
+        live: "",
+        github: 'https://github.com/applemagic-01/netmorph'
+    },
+    {
+        num: '03',
+        category: 'Login System',
+        title: 'Project 3',
         description: 'Basic Login System',
         stack: [{ name: "ReactJS" }, { name: "NodeJS" }, { name: "ExpressJS" }, { name: "MongoDB" }],
         image: '/assets/work/thumb4.png',
@@ -26,9 +46,9 @@ const works = [
         github: 'https://github.com/applemagic-01/mern-auth-login'
     },
     {
-        num: '02',
+        num: '04',
         category: 'fullstack',
-        title: 'Project 2',
+        title: 'Project 4',
         description: 'Comprehensive online platform that connects users with local home service providers.',
         stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "GraphQL" }, { name: "HyGraph" },],
         image: '/assets/work/thumb1.png',
@@ -36,9 +56,9 @@ const works = [
         github: 'https://github.com/applemagic-01/we-help'
     },
     {
-        num: '03',
+        num: '05',
         category: 'mobile application',
-        title: 'Project 3',
+        title: 'Project 5',
         description: 'API based Weather Application',
         stack: [{ name: "Flutter" }],
         image: '/assets/work/thumb2.png',
@@ -46,9 +66,9 @@ const works = [
         github: 'https://github.com/applemagic-01/weather-app'
     },
     {
-        num: '04',
+        num: '06',
         category: 'mobile application',
-        title: 'Project 4',
+        title: 'Project 6',
         description: 'Mobile chat Application',
         stack: [{ name: "Flutter" }, { name: "Firebase" }],
         image: '/assets/work/thumb3.png',
@@ -57,9 +77,9 @@ const works = [
     },
 
     {
-        num: '05',
+        num: '07',
         category: 'mobile application',
-        title: 'Project 5',
+        title: 'Project 7',
         description: 'Simple E-Commerce Application',
         stack: [{ name: "Flutter" }],
         image: '/assets/work/thumb_5.png',
@@ -111,18 +131,21 @@ const Projects = () => {
                             { /* buttons*/}
                             <div className="flex items-center gap-4">
                                 { /* live project button*/}
-                                <Link href={work.live}>
-                                    <TooltipProvider delayDuration={100}>
-                                        <Tooltip>
-                                            <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group ">
-                                                <BsArrowUpRight className="text-3xl text-white group-hover:text-accent" />
-                                            </TooltipTrigger>
-                                            <TooltipContent >
-                                                <p>Live Project</p>
-                                            </TooltipContent>
-                                        </Tooltip>
-                                    </TooltipProvider>
-                                </Link>
+                                {work.live?.trim() !== "" && (
+    <Link href={work.live}>
+        <TooltipProvider delayDuration={100}>
+            <Tooltip>
+                <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group ">
+                    <BsArrowUpRight className="text-3xl text-white group-hover:text-accent" />
+                </TooltipTrigger>
+                <TooltipContent>
+                    <p>Live Project</p>
+                </TooltipContent>
+            </Tooltip>
+        </TooltipProvider>
+    </Link>
+)}
+
                                 { /* Github project button*/}
                                 <Link href={work.github}>
                                     <TooltipProvider delayDuration={100}>
@@ -148,7 +171,7 @@ const Projects = () => {
                                         <div className="absolute top-0 bottom-0 z-10 w-full h-full bg-black/10"></div>
                                         { /* image*/}
                                         <div className="relative w-full h-full ">
-                                            <Image src={project.image} fill className="object-cover " alt="" />
+                                            <Image src={project.image} fill className="w-full h-auto object-contain " alt="" />
                                         </div>
                                     </div>
                                 </SwiperSlide>
