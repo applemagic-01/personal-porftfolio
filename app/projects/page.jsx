@@ -31,7 +31,7 @@ const works = [
         title: 'Project 2',
         description: 'Netmorph- Unsupervised feature learning for polymorphic malware using Autoencoder and Random Forest',
         stack: [{ name: "Python" }],
-        image: '/assets/work/thumb4.png',
+        image: '',
         live: "",
         github: 'https://github.com/applemagic-01/netmorph'
     },
@@ -171,7 +171,7 @@ const Projects = () => {
                                         <div className="absolute top-0 bottom-0 z-10 w-full h-full bg-black/10"></div>
                                         { /* image*/}
                                         <div className="relative w-full h-full ">
-                                            <Image src={project.image} fill className="w-full h-auto object-contain " alt="" />
+                                            <Image src={project.image} fill className="w-full h-auto object-contain " alt="No preview available" />
                                         </div>
                                     </div>
                                 </SwiperSlide>
