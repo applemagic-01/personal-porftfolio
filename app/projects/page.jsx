@@ -18,7 +18,7 @@ const works = [
    {
         num: '01',
         category: 'Project Management',
-        title: 'Project 1',
+        title: '1',
         description: 'fluxo- a project management appilcation',
         stack: [{ name: "ReactJS" }, { name: "NodeJS" }, { name: "ExpressJS" }, { name: "PostgreSQL" }],
         image: '/assets/work/thumb6.png',
